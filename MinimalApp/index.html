@@ -21,6 +21,29 @@
     <script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
 
+    <script language="JavaScript">
+		var ranNums1 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+		var ranNums2 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+		var ranNums3 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+		var ranNums4 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+		var ranNums5 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+		var ranNums6 = shuffle([1,2,3,4,5,6,7,8,9,10]);
+	
+	function shuffle(array) {
+    	var i = array.length,
+        j = 0,
+        temp;
+	    while (i--) {
+	        j = Math.floor(Math.random() * (i+1));
+	        // swap randomly chosen element with current element
+	        temp = array[i];
+	        array[i] = array[j];
+	        array[j] = temp;
+	    }
+	    return array;
+	}
+	</script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -44,41 +67,73 @@
       </div>
     </div>
 
-
-	
-	<!-- +++++ Categories Section +++++ -->
-	
 	<div class="container pt">
 			Seleccionar Categoría:	
 		<div class="row mt centered">
 
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/leng_prim_orden/questionPage.html"><img class="img-responsive" src="assets/img/orange.png" alt="" /></a>
-        <form action="question.html">
-          <input type="hidden" name="cat" value="equiv" />
-        </form>
+
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="leng_prim_orden" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums1.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/orange.png" />
+				</form>
+
 				<p style="margin-left:-150px;">LOGICA DE 1° ORDEN</p>
 			</div>
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/clasif_forms/questionPage.html"><img class="img-responsive" src="assets/img/violet.png" alt="" /></a>
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="clasif_forms" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums2.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/violet.png" />
+
+				</form>
 				<p style="margin-left:-150px;">CLASIFICACIÓN DE FÓRMULAS</p>
 			</div>
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/tableaux/questionPage.html"><img class="img-responsive" src="assets/img/green.png" alt="" /></a>
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="tableaux" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums3.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/green.png" />
+				</form>
 				<p style="margin-left:-150px;">TABLEAUX</p>
 			</div>
 		</div><!-- /row -->
 		<div class="row mt centered">	
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/deduccion_nat/questionPage.html"><img class="img-responsive" src="assets/img/yellow.png" alt="" /></a>
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="deduccion_nat" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums4.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/yellow.png" />
+				</form>
 				<p style="margin-left:-150px;">DEDUCCION NATURAL</p>
 			</div>
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/equivalencias/questionPage.html"><img class="img-responsive" src="assets/img/blue.png" alt="" /></a>
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="equivalencias" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums5.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/blue.png" />
+				</form>
 				<p style="margin-left:-150px;">EQUIVALENCIAS</p>
 			</div>
 			<div class="col-lg-4">
-				<a class="zoom green" href="questions/comodin/questionPage.html"><img class="img-responsive" src="assets/img/red.png" alt="" /></a>
+				<form action="questions/questionPage.html">
+					<input type="hidden" name="cat" value="comodin" />
+					<script language="javascript">
+						document.write('<input type="hidden" name="question_number" value="' + ranNums6.pop() + '"/>');
+					</script>
+					<input type="image" name='signup' src="assets/img/red.png" />
+				</form>
 				<p style="margin-left:-150px;">?</p>
 			</div>
 		</div><!-- /row -->
